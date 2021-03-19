@@ -1,4 +1,3 @@
-using DIO.Series.Enum;
 
 namespace DIO.Series.Classes
 {
@@ -22,10 +21,11 @@ namespace DIO.Series.Classes
 
         public override string ToString()
         {
-            return $@"Gênero {this.Genero} \n
-                    Título: {this.Titulo} \n
-                    Descrição: {this.Descricao} \n
-                    Ano de Início: {this.Ano}";
+            return  $"Gênero {this.Genero} \n" +
+                    $"Título: {this.Titulo} \n" +
+                    $"Descrição: {this.Descricao} \n" +
+                    $"Ano de Início: {this.Ano} \n" +
+                    $"Excluido: {this.Excluido}";
         }
 
         public string retornaTitulo()
@@ -36,6 +36,10 @@ namespace DIO.Series.Classes
         public int retornaId()
         {
             return this.Id;
+        }
+        public bool retornaExcluido()
+        {
+            return this.Excluido;
         }
 
         public void Excluir()
