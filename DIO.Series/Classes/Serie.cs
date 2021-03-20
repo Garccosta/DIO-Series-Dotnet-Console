@@ -3,12 +3,15 @@ namespace DIO.Series.Classes
 {
     public class Serie : EntidadeBase   
     {
-        private Genero Genero { get; set; }
+        public Genero Genero { get; set; }
         public string Titulo { get; set; }  
         public string Descricao { get; set; }
         public int Ano { get; set; }
-        private bool Excluido { get; set; }
+        public bool Excluido { get; set; }
 
+        public Serie()
+        {
+        }
         public Serie(int id, Genero genero, string titulo, string descricao, int ano)
         {
             this.Id = id;
